@@ -1,0 +1,24 @@
+http -- Hypertext Transfer protocal
+--> protocall is nothing but a set of rules and regulations.
+protocalls like:
+ -- http
+ -- https
+ -- tcpl IP
+ -- smtp
+--> tcp transmision protocall - It will divide the data into packets.
+--> IP - Internet protocal - transfer to destination address.
+
+Authentication: Verifying the username and password exits or not.
+Autherization: whether you have right access or not to paticular content or page.
+
+Static Content: It is nothingbut it will not change for any one same content will be served for all.
+ ex: jpg,gif,html and login page...
+Dynamic content: It will change for each and every person or end user
+
+Internet: Internet is  enabled globally.
+Intranet: Intranet is enabled with in the organization.
+
+What is Application?
+ Application is nothing but collection of modules
+ Modules is group of pages
+ pages is collection of code
