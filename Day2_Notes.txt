@@ -1,0 +1,58 @@
+Application Server:
+
+Containers:
+Web Container 9080/9443
+EJB Container
+JNDI
+
+
+DB Connect using JDBC and Datasource 
+
+Each and every application has its own data in the database
+
+Application:
+Application is combination of modules
+Module is a set of pages
+Page is nothing but a collection of code
+
+
+Start Procedure:
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin # ./startManager.sh
+
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin # ./startNode.sh
+
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin # ./startServer.sh server1
+
+Stop Procedure:
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin # ./stopServer.sh server1
+
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin # ./stopNode.sh
+
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin # ./stopManager.sh
+
+Profile Creation:
+was7host01:/opt/IBM/WebSphere/AppServer/bin/ProfileManagement # ./pmt.sh
+
+Where to identify Profile infor like ports and nodename
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/Custom01/logs # cat AboutThisProfile.txt
+Application server environment to create: Custom
+Location: /opt/IBM/WebSphere/AppServer/profiles/Custom01
+Disk space required: 10 MB
+Profile name: Custom01
+Make this profile the default: False
+Node name: was7host01Node02
+Host name: was7host01.ibm.com
+Federate to deployment manager: False
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/Custom01/logs 
+
+To check the java processes are running or not:
+ps -ef|grep java
+ps - process
+ef - end file
+grep - to fetch the data
+java - java process
+
+Federation:
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/Custom01/bin # ./addNode.sh localhost 8879
+
+

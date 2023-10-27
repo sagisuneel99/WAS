@@ -1,0 +1,41 @@
+http://localhost:9060/ibm/console - console url
+
+cd ..   To come
+
+cd - change directory
+
+cat to view short file
+
+Console Port 9060/9043
+
+Webcontainer port 9080/9443
+
+default soap port number 8879
+
+context root: nothing but webapplication
+
+Creating profile in command line:
+was7host01:/opt/IBM/WebSphere/AppServer/bin # ./manageprofiles.sh -create -templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/default/ -profileName AppSrv03 -profilePath /opt/IBM/WebSphere/AppServer/profiles/AppSrv03
+INSTCONFSUCCESS: Success: Profile AppSrv03 now exists. Please consult /opt/IBM/WebSphere/AppServer/profiles/AppSrv03/logs/AboutThisProfile.txt for more information about this profile.
+was7host01:/opt/IBM/WebSphere/AppServer/bin #
+
+Federation :
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/AppSrv03/bin # ./addNode.sh localhost 8879 -includeapps
+
+Cluster Creation:
+
+cluster name
+Next 
+Create the member using an application server template.
+Create the member using an existing application server as a template
+Create the member by converting an existing application server.
+None. Create an empty cluster.
+next
+Create additional cluster members
+Summary and finish
+=====================
+
+To know what the servers are hosted in a particular profile/node:
+was7host01:/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/bin # ./serverStatus.sh -all
+
+
